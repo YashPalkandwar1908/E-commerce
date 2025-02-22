@@ -2,11 +2,11 @@ import mysql2 from "mysql2";
 
 
 const pool = mysql2.createPool({
-    host: process.env.HOST||'localhost',
-    port: Number(process.env.PORTDB)||3306,
-    user: process.env.USER||'root',
-    password: process.env.PASSWORD||'@Mysql1908',
-    database: process.env.DATABASE||'ecommerce'
+    host: process.env.HOST,
+    port: Number(process.env.PORTDB),
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
 });
 
 
