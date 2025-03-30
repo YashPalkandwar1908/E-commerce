@@ -1,10 +1,13 @@
 import express from 'express';
-
+import usersRouter from './routes/users'
 import { connectDB } from './db';
 
 const app = express();
 
-const PORT = 3000;
+app.use(express.json())
+app.use('/api/users', usersRouter)
+
+
 
 connectDB()
 .then(()=>{
